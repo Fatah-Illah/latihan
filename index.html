@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Styling Portfolio Sederhana</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" href="images/logo.jpeg">
+    </head>
+
+    <body>
+        <div class="header">
+            <h1 class="judul">GOALS</h1>
+        </div>
+        
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="https://www.google.com/" target="_blank">HOME</a></li>
+                        <li><a href="https://www.google.com/" target="_blank">PRODUCT</a></li>
+                        <li><a href="https://www.google.com/" target="_blank">GALLERY</a></li>
+                        <li><a href="https://www.google.com/" target="_blank">BLOG</a></li>
+                        <li><a href="https://www.google.com/" target="_blank">INVENTORY</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <section class="profile">
+                <div style="display: flex;flex-direction:row;">
+                    <div style="flex: 1;">
+                        <a href="images/hero.png" target="_blank">
+                        <img src="images/hero.png" /></a>
+                    </div>
+                    <div class="kontak" style="flex: 1;">
+                        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fatahillah</h2>
+                        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        Front End Designer</p>
+                        <br />
+                        <!-- contoh dialog box dengan konten form didalamnya -->
+                        <dialog id="dialog2">
+                            <form method="dialog">
+                                <label>Email : </label>
+                                <a href="images/hero.png" target="_blank">fatahillahera18@gmail.com</a>
+                                <br />
+                                <hr />
+                                <label>Mobile Number : </label>
+                                <a href="images/hero.png" target="_blank">085371221600</a>           
+                                <menu>
+                                    <button id="cancel" type="reset">Ok</button>
+                                </menu>
+                            </form>
+                        </dialog>
+                            <menu>
+                                <button id="showDialog">Kontak</button>
+                                <a href="https://www.linkedin.com/in/fatahillah-35b1a821a/"
+                                target="_blank"><button>Resume</button></a>
+                            </menu>
+                    <script>
+                        (function() {
+                        var bukaDialog = document.getElementById('showDialog');
+                        var tutupDialog = document.getElementById('cancel');
+                        // buka atau tampilkan dialog box
+                        bukaDialog.addEventListener('click', function() {
+                        document.getElementById('dialog2').showModal();
+                        });
+                        // tutup dialog box
+                        tutupDialog.addEventListener('click', function() {
+                        document.getElementById('dialog2').close();
+                        });
+                        })();
+                    </script>
+                    </div>
+                    <div style="flex: 3;" class="biodata">
+                        <table>
+                            <tr>
+                                <th>Availability
+                                    <p></p>
+                                </th>
+                                <td>: Full-Time
+                                    <p></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Usia
+                                    <p></p>
+                                </th>
+                                <td>: 24 Tahun
+                                    <p></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Lokasi
+                                    <p></p>
+                                </th>
+                                <td>: Pekanbaru, Indonesia
+                                    <p></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Pengalaman
+                                    <p></p>
+                                </th>
+                                <td>: 2
+                                    <p></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Email
+                                    <p></p>
+                                </th>
+                                <td>: <a href="images/hero.png" target="_blank">
+                                    fatahillahera18@gmail.com
+                                    <p></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="formulir">
+                <div class="isi" style="display: flex;flex-direction:row;">
+                    <form action="register.php" method="POST">
+                        <h3>Formulir Pendaftaran</h3>
+                        <hr />
+                        <div class="nama">
+                            <label for="nama">Nama Lengkap : </label>
+                            <input id="nama" type="text" name="nama" 
+                            placeholder="Masukkan Nama Lengkap Anda" required />
+                        </div>
+                        <div>
+                            <label for="role">Job Role : </label>
+                            <input id="role" type="text" name="role" 
+                            placeholder="Peran Pekerjaan. Ex : Front End Developer, Back End Developer, etc"
+                            required />
+                        </div>
+                        <br />
+                        <fieldset>
+                            <legend><label for="ava">Availability : </Label></legend>
+                            <label>
+                                <input type="radio" name="ava" value="pilih"
+                                disabled selected required />Pilih Salah Satu
+                                <input id="ava" type="radio" name="ava" value="ft"/>Full-Time
+                                <input type="radio" name="ava" value="pt"/>Part-Time
+                                <input type="radio" name="ava" value="s"/>Shifting
+                                <input type="radio" name="ava" value="f"/>Freelance
+                            </label>
+                        </fieldset>
+                        <br />
+                        <div>
+                            <label for="isian-usia">Usia : </label>
+                            <input id="isian-usia" type="number" name="usia" 
+                            min="18" max="60" placeholder="dalam (Tahun)"
+                            required />
+                        </div>
+                        <div>
+                            <label for="Lokasi">Lokasi : </label>
+                            <select id="Lokasi" name="Lokasi" required>
+                                <option disabled selected>- Pilih -</option>
+                                <option>Jakarta</option>
+                                <option>Bandung</option>
+                                <option>Tasikmalaya</option>
+                                <option><label for="dll">yang lainnya --></label></option>
+                            </select>
+                            <input id="dll" type="text" name="dll"
+                            placeholder="Jika Pilihan 'yang lainnya'" />
+                        </div>
+                        <div>
+                            <label for="YE">Years Expeience : </label>
+                            <input id="YE" type="number" name="YE" min="0" max="10" 
+                            placeholder="dalam (Tahun)" required />
+                        </div>
+                        <div>
+                            <label for="isian-email">Email : </label>
+                            <input id="isian-email" type="email" 
+                            placeholder="abcde@gmail.com" required />
+                        </div>
+                        <div>
+                            <label for="alamat">Alamat Lengkap : </label>
+                            <textarea placeholder="(Nama Jalan & No. Rumah, RT/RW, Kelurahan, Kecamatan, Kabupaten/Kota, Provinsi & Kode Pos)"
+                            id="alamat" name="alamat" required></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Kirimkan Data" />
+                            <input type="reset" value="Reset" />
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
